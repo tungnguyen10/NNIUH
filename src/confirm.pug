@@ -1,0 +1,138 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  h1(style="display:none") Vé máy bay Thanh Tùng
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Thông tin đăng ký
+
+  section.content-page
+    .page-confirm.container
+      .row
+        .col-12
+          h2.title
+            span Thông tin đăng ký
+          #confirm
+            form#customer_confirm(accept-charset='utf-8' action='payment.html' )
+              .form-confirm
+                .row
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Số CMND / Thẻ căn cước / Hộ chiếu
+                        span.required *
+                      p.form-control 123456789
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Họ và tên đầy đủ
+                        span.required *
+                      p.form-control Nguyen van A
+
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Giới tính
+                        span.required *
+                      p.form-control Nam
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ngày sinh (Theo giấy khai sinh)
+                        span.required *
+                      p.form-control 01/01/1980
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Mật khẩu
+                        span.required *
+                      p.form-control ********
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Email
+                        span.required *
+                      p.form-control test@gmail.com
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Số điện thoại
+                        span.required *
+                      p.form-control 0909123156
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Nơi sinh (Theo giấy khai sinh)
+                        span.required *
+                      p.form-control 12 Nguyễn Văn Bảo p4 Gò vấp Hcm
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Nơi công tác, học tập
+                        span.required *
+                      p.form-control 12 Nguyễn Văn Bảo p4 Gò vấp Hcm
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Địa chỉ (báo tin)
+                        span.required *
+                      p.form-control 12 Nguyễn Văn Bảo p4 Gò vấp Hcm
+
+
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Đối tượng dự thi
+                        span.required *
+                      p.form-control Thí sinh Tự do
+
+
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ảnh chụp mặt trước CMND
+                        span.required *
+                      p.form-control cmnd.jpg
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ảnh thẻ 4x6
+                        span.required *
+                      p.form-control anhthe.jpg
+          .btn-sbmit
+            .button_bottom
+              .btn_register(onclick="window.history.go(-1); return false;") Quay lại
+            .button_bottom
+              button.btn_register(type='submit' value='Xác nhận thông tin') Xác nhận thông tin
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")

@@ -1,0 +1,154 @@
+header
+  .header_top
+    .container
+      .row.no-gutters
+        ul.header_top_contact.d-sm-none
+          li
+            i.fas.fa-phone-square-alt
+            a(href="tel:0327421742").tel 032 742 1742
+          li
+            i.fas.fa-envelope
+            a(href="mailto:laotama742@gmail.com") laotama742@gmail.com
+
+        ul.header_top_menu
+          li: a(href="./") Trang chủ
+          li: a(href="#") Tham gia thi
+          li: a(href="login.html") Đăng nhập
+
+  .menu
+    .container
+      p.logo: a(href="./"): img(src="./templates/img/logo.png" alt="iuh")
+      ul.item_big.d-md-none
+        li.nav-item.active
+          a.a-img(href='registration.html' title='Đăng ký thi')
+            span Đăng ký thi
+        li.nav-item
+          a.a-img(href='#' title='Thi thử trực tuyến')
+            span Thi thử trực tuyến
+        li.nav-item
+          a.a-img(href='#' title='Khảo thí')
+            span Khảo thí
+            i.fa.fa-angle-down
+          ul.item_small
+            li: a(href='about.html' title='Giới thiệu') Giới thiệu 
+            li: a(href='#' title='Lịch thi') Lịch thi 
+            li: a(href='#' title='Hướng dẫn thi') Hướng dẫn thi 
+            li: a(href='#' title='Định dạng đề thi') Định dạng đề thi 
+            li: a(href='#' title='Quy trình') Quy trình 
+        li.nav-item
+          a.a-img(href='news.html' title='tin tức')
+            span tin tức
+        li.nav-item
+          a.a-img(href='#' title='tra cứu')
+            span tra cứu
+            i.fa.fa-angle-down
+          ul.item_small
+            li: a(href='#' title='Hồ Sơ Dự Thi') Hồ Sơ Dự Thi 
+            li: a(href='#' title='Thẻ Dự Thi') Thẻ Dự Thi 
+            li: a(href='#' title='Hướng dẫn thi') Hướng dẫn thi 
+            li: a(href='#' title='Cấp chứng chỉ') Cấp chứng chỉ 
+        li.nav-item
+          a.a-img(href='#' title='thư viện')
+            span thư viện
+            i.fa.fa-angle-down
+          ul.item_small
+            li: a(href='#' title='Biểu Mẫu') Biểu Mẫu 
+            li: a(href='#' title='Văn bản pháp quy') Văn bản pháp quy 
+            li: a(href='#' title='Kết quả thii') Kết quả thii 
+            li: a(href='#' title='Tài liệu Tham khảo') Tài liệu Tham khảo 
+        li.nav-item
+          a.a-img(href='contact.html' title='Liên hệ')
+            span Liên hệ
+    span.menubutton.d-none.d-sm-block.d-md-block
+      i.fas.fa-bars
+  .opacity_menu
+  .wrapmenu_right
+    .wrapmenu
+      .wrapmenu_full.menumain_full
+        .containers
+          // Menu mobile
+          .contenttop.p-r-30
+            .section.a-left
+              form.input-group.search-bar(action='/search' method='get' role='search')
+                input.input-group-field.auto-search(type='text' name='query' value='' autocomplete='off' required='' placeholder='Tìm kiếm...')
+                button.visible_index.btn.icon-fallback-text(type='submit')
+                  i.fa.fa-search
+          .menu_mobile.clearfix
+            ul.ul_collections
+              li.level0.level-top.parent
+                a(href='registration.html') Đăng ký thi
+              li.level0.level-top.parent
+                a(href='#') Thi thử trực tuyến
+              li.level0.level-top.parent
+                a(href='#') Khảo thí
+                i.fa.fa-plus
+                ul.level0(style='display:none;')
+                  li.level1
+                    a(href='about.html')
+                      span Giới thiệu
+                  li.level1
+                    a(href='#')
+                      span Lịch Thi
+                  li.level1
+                    a(href='#')
+                      span Hướng dẫn thi
+                  li.level1
+                    a(href='#')
+                      span Định dạng đề thi
+                  li.level1
+                    a(href='#')
+                      span Quy trình
+                  li.level1
+                    a(href='#')
+                      span Các khoá học
+              li.level0.level-top.parent
+                a(href='news.html') Tin tức
+              li.level0.level-top.parent
+                a(href='#') Tra cứu
+                i.fa.fa-plus
+                ul.level0(style='display:none;')
+                  li.level1
+                    a(href='#')
+                      span Hồ Sơ Dự Thi
+                  li.level1
+                    a(href='#')
+                      span Thẻ Dự Thi
+                  li.level1
+                    a(href='#')
+                      span Kết quả thi
+                  li.level1
+                    a(href='#')
+                      span Cấp chứng chỉ
+              li.level0.level-top.parent
+                a(href='#') Thư viện
+                i.fa.fa-plus
+                ul.level0(style='display:none;')
+                  li.level1
+                    a(href='#')
+                      span Biểu Mẫu
+                  li.level1
+                    a(href='#')
+                      span Văn bản pháp quy
+                    i.fa.fa-plus
+                    ul.level1(style='display:none;')
+                      li.level2
+                        a(href='#')
+                          span Quy định thi
+                      li.level2
+                        a(href='#')
+                          span Quy định thi
+                  li.level1
+                    a(href='#')
+                      span Tài liệu Tham khảo
+
+              li.level0.level-top.parent
+                a(href='contact.html') Liên hệ
+          .p-r-30.clearfix.margin-top-15
+            ul.social_f
+              li.fb: a(href="#") 
+              li.zl: a(href="#") 
+              li.tw: a(href="#") 
+              li.ins: a(href="#") 
+
+
+

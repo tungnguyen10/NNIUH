@@ -1,0 +1,49 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon', type='image/png', href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  h1(style="display:none") Vé máy bay Thanh Tùng
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item
+            a(href='news.html') Tin tức
+          li.breadcrumb-item.active(aria-current='page') Chi tiết tin tức
+
+  section.content-page
+    .container
+      .row
+        .col-12
+          h1.title
+            span Giới thiệu
+        .col-12
+          p.mt30 Bài viết đang cập nhật .....
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")

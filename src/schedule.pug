@@ -1,0 +1,235 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon', type='image/png', href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  h1(style="display:none") Vé máy bay Thanh Tùng
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Đăng ký thi
+
+  section.content-page
+    .container
+      .row
+        .col-12
+          h1.title
+            span Lịch thi đánh giá năng lực ngoại ngữ năm 2020
+        .col-12
+          p.mb30
+            span(style='font-size: 14px;')
+              span(lang='vi-VN' style='text-align: justify; text-indent: 24px;')
+                b Lịch thi 
+              b(style='text-align: justify; text-indent: 24px;') đánh giá năng lực ngoại ngữ
+              span(lang='vi-VN' style='text-align: justify; text-indent: 24px;')
+                b  tại Trường Đại học 
+              span(lang='pt-BR' style='text-align: justify; text-indent: 24px;')
+                b Trà Vinh 
+              span(lang='vi-VN' style='text-align: justify; text-indent: 24px;')
+                b
+                  | trong năm 
+                  span(style='color: #000080;') 2020 
+          table(style='width: 100%;' border='1' width='100%' cellspacing='0' cellpadding='0').mb30
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong STT
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong Tháng
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong Ngày trong tháng
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong Thứ trong tuần
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong Bài thi bậc
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    span(style='color: #fd9805;')
+                      strong Thời gian nộp hồ sơ và lệ phí thi
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 1
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 05
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 26, 27
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | Thứ 3, 4
+                    br
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') đến hết ngày 17/05/2020
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 06
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | 23, 24
+                    br
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | Thứ 3, 4
+                    br
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') đến hết ngày 14/06/2020
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 3
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 09
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | 05, 06
+                    br
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | Thứ 7, CN
+                    br
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') đến hết ngày 25/08/2020
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 4
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 10
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | 20, 21 (dự kiến)
+                    br
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | Thứ 3, 4
+                    br
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') trước ngày 10/10/2020
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 5
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 11
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | 21, 22 (dự kiến)
+                    br
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Thứ 7, CN
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') trước ngày 10/11/2020
+            tr
+              td(style='width: 45px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 6
+              td(style='width: 79px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') Tháng 12
+              td(style='width: 142px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | 15, 16 (dự kiến)
+                    br
+              td(style='width: 125px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;')
+                    | Thứ 3, 4
+                    br
+              td(style='width: 96px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') 2, 3, 4, 5
+              td(style='width: 246px; height: 33px;')
+                p(align='center')
+                  span(style='font-size: 14px;') trước ngày 05/12/2020
+          ul
+            li
+              p(style='margin-bottom: 0in; line-height: 21px;' align='justify')
+                span(style='font-size: 14px;')
+                  span(style='text-align: justify;') Hình thức thi: trên máy tính
+            li
+              p(style='margin-bottom: 0in; line-height: 21px;' align='justify')
+                span(style='font-size: 14px;')
+                  span(style='text-align: justify;') Thời gian thi có thể thay đổi và bổ sung tùy vào tình hình thực tế.
+
+        
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")

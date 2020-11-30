@@ -1,0 +1,158 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  h1(style="display:none") Vé máy bay Thanh Tùng
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Đăng ký thi
+
+  section.content-page
+    .page-name_register.container
+      .row
+        .col-12
+          h2.title
+            span Đăng ký dự thi
+          #name_register
+            form#customer_name_register(accept-charset='utf-8' action='/account/register' method='post')
+              .form-signup
+                .row
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Số CMND / Thẻ căn cước / Hộ chiếu
+                        span.required *
+                      input#id_cmnd.form-control(type='id_cmnd' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' value='' name='id_cmnd' placeholder='123456789' required='')
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Họ và tên đầy đủ
+                        span.required *
+                      input#nameCandidate.form-control(type='nameCandidate' name='nameCandidate' placeholder='Nguyen Van A' required='')
+
+                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Giới tính
+                        span.required *
+                      select#gender.form-control(name='gender')
+                        option(value='Nam' selected='selected') Nam
+                        option(value='Nữ') Nữ
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ngày sinh (Theo giấy khai sinh)
+                        span.required *
+                      .input-group.date
+                        input#datepicker.form-control(type='text')
+                        i.far.fa-calendar-alt
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Mật khẩu
+                        span.required *
+                      input#passCandidate.form-control(type='passCandidate' name='passCandidate' placeholder='Thí sinh tự đặt mật khẩu' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Email
+                        span.required *
+                      input#email.form-control(type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' name='email' placeholder='Email' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Số điện thoại
+                        span.required *
+                      input#tel.form-control(type='tel' name='tel' placeholder='0908888888' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Nơi sinh (Theo giấy khai sinh)
+                        span.required *
+                      input#placeBirth.form-control(type='text' name='placeBirth' placeholder='Huyện - Tỉnh' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Nơi công tác, học tập
+                        span.required *
+                      input#placeWork.form-control(type='text' name='placeWork' placeholder='Nơi bạn đang công tác' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Địa chỉ (báo tin)
+                        span.required *
+                      input#address.form-control(type='text' name='address' placeholder='Nơi bạn đang công tác' required='')
+
+
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Đối tượng dự thi
+                        span.required *
+                      select.form-control(name="subjects")
+                        option(value='Thí sinh Tự do' selected='selected') Thí sinh Tự do
+                        option(value='Sinh viên Đại học Trà Vinh') Sinh viên Đại học Trà Vinh
+                        option(value='Học viên sau đại học Đại học Trà Vinh') Học viên sau đại học Đại học Trà Vinh
+                        option(value='Viên chức Đại học Trà Vinh') Viên chức Đại học Trà Vinh
+
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ảnh chụp mặt trước CMND
+                        span.required *
+                      .custom-file
+                        input#picCMND.custom-file-input(type='file' name='picCMND' lang='es')
+                        label.custom-file-label(for='picCMND') Chọn file
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Ảnh thẻ 4x6
+                        span.required *
+                      .custom-file
+                        input#piccard.custom-file-input(type='file' name='piccard' lang='es')
+                        label.custom-file-label(for='piccard') Chọn file
+                .btn-sbmit
+                  .button_bottom
+                    .btn_register(onclick="window.history.go(-1); return false;") Quay lại
+                  .button_bottom
+                    button.btn_register(type='submit' value='Tiếp theo') Tiếp theo
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js")
+  script(src="./templates/js/default.js")
+  script.
+    $( function() {
+    $( "#datepicker" ).datepicker({
+    dateFormat: "dd-mm-yy"
+    ,	duration: "fast"
+    });
+    } );

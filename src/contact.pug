@@ -1,0 +1,84 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon', type='image/png', href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ul.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Liên hệ
+  section.section_contact
+    .container
+      .form-contact
+        .row
+          .col-xl-4.col-lg-5.col-md-6.col-12.col-contact
+            .content-left
+              p.text_des Khoa Ngoại ngữ - ĐH Công Nghiệp TP.HCM
+              .content-contact
+                i.fas.fa-map-marker-alt
+                span
+                  b Địa chỉ: 
+                  | 12 Nguyễn Văn Bảo, Q. Gò Vấp, TP. Hồ Chí Minh Khoa Ngoại ngữ - Tầng trệt - Nhà B
+              .content-contact
+                i.fas.fa-envelope
+                span
+                  b Hotline: 
+                  a(href='tell:02838940390')
+                    | 0283 8940 390
+              .content-contact
+                i.fas.fa-phone
+                span
+                  b Email: 
+                  a(href='mailto:dhcn@iuh.edu.vn')
+                    | dhcn@iuh.edu.vn
+              .content-contact
+                i.fas.fa-clock
+                span
+                  b Giờ làm việc: 
+                  | Giờ làm việc: 8h00 – 17h00 từ thứ 2 đến Chủ nhật
+          .col-xl-8.col-lg-7.col-md-6.col-12.col-contact-2
+            .content-right
+              p.text_des Gửi thông tin
+              form#contact(accept-charset='UTF-8' action='/contact' method='post')
+                input(name='FormType' type='hidden' value='contact')
+                input(name='utf8' type='hidden' value='true')
+                .form-signup
+                  .group_contact
+                    fieldset.form-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      input.form-control.form-control-lg(placeholder='Họ và tên' type='text' required='' value='' name='contact[Name]')
+                    fieldset.form-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      input#email1.form-control.form-control-lg(placeholder='Email' type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' required='' value='' name='contact[email]')
+                    fieldset.form-group.col-lg-12.col-md-12.col-sm-12.col-xs-12
+                      textarea#comment.form-control.content-area.form-control-lg(placeholder='Nội dung' name='contact[body]' rows='5' required='')
+                    button.btn.btn-primary.btn-lienhe(type='submit') Gửi tin nhắn
+    .iFrameMap
+      iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d979.6388035882823!2d106.67952227214906!3d10.845310511090728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175298451960a6b%3A0x6beba7ae3a0953dd!2zVsOpIG3DoXkgYmF5IFRoYW5oIFTDuW5n!5e0!3m2!1sen!2s!4v1592500102694!5m2!1sen!2s' width='100%' height='700' style='border:0' allowfullscreen='')
+
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")

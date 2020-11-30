@@ -1,0 +1,157 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon', type='image/png', href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ul.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Tin tức
+  section.content-page
+    .container
+      .row
+        .col-12
+          h1.title
+            span Tin tức
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...        
+        .col-lg-4.col-md-6
+          .item.card.btn-curl-top-left
+            figure: a(href="newsdetail.html"): img.card-img-top(src='./templates/img/image1.jpg' alt='Card image cap')
+            .card-body
+              .time
+                |Thứ Ba, 22/02/2020
+                i.far.fa-calendar-alt
+              h3.card-title: a(href="newsdetail.html") IUH tổ chức gặp mặt truyền thống nhân Ngày Nhà giáo Việt Nam 20/11
+              p.card-text Nhân dịp ngày Nhà giáo Việt Nam 20/11, thay mặt Ban cán sự đảng, Lãnh đạo Bộ Công Thương, Bộ trưởng Bộ Công Thương Trần Tuấn Anh đã gửi thư chúc mừng tới toàn thể thầy cô giáo, cán bộ, viên chức của Nhà trường ...
+        
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")

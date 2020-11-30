@@ -1,0 +1,80 @@
+doctype html
+html(lang="vi")
+  head
+    title #{TITLE}
+    meta(charset="utf-8")
+    link(rel='icon' type='image/png' href='img/favicon.png')
+
+    meta(name="description" content="DESCRIPTION")
+    meta(name="keywords" content="KEYWORDS")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    link(href="./templates/css/animate.min.css" rel="stylesheet")
+    link(href="./templates/css/bootstrap.css" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet")
+    link(href="./templates/css/style.css" rel="stylesheet")
+
+body
+  //- header
+  block header
+    include ./elements/_header.pug
+
+  h1(style="display:none") Vé máy bay Thanh Tùng
+  nav#breadcrumb(aria-label='breadcrumb')
+    .container
+      .row
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='./') Home
+          li.breadcrumb-item.active(aria-current='page') Đăng ký thi
+
+  section.content-page
+    .page-register.container
+      .row
+        .col-12
+          h2.title
+            span Đăng ký dự thi
+          #register
+            form#customer_register(accept-charset='utf-8' action='/account/register' method='post')
+              .form-signup.clearfix
+                .row
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Họ và tên
+                        span.required *
+                      input.form-control(placeholder='Họ và tên' type='text' required='' value='' name='contact[Name]')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Số điện thoại
+                        span.required *
+                      input.form-control.form-control-comment(placeholder='Số điện thoại' type='text' pattern='\d+' name='PhoneNumber' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Email
+                        span.required *
+                      input#email.form-control(type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' value='' name='email' placeholder='Email' required='')
+                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                    fieldset.form-group
+                      label
+                        | Mật khẩu 
+                        span.required *
+                      input#password.form-control(type='password' value='' name='password' placeholder='Mật khẩu' required='')
+
+
+                .button_bottom
+                  button.btn_register(type='submit' value='Đăng ký') Đăng ký
+                  span
+                    | Bạn đã có tài khoản? Đăng nhập 
+                    a.btn-link(href='/login.html' style='text-decoration: underline;') tại đây
+
+  //- footer
+  block footer
+    include ./elements/_footer.pug
+
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="./templates/js/default.js")
