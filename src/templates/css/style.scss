@@ -1747,3 +1747,59 @@ footer {
     }
   }
 }
+
+.nav-tabs {
+  margin: 20px 0;
+  padding-bottom: 20px;
+
+  > li {
+    a {
+      span {
+        background: #fd9805;
+        color: #fff;
+        border-color: #fd9805;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 18px;
+        line-height: 30px;
+        margin-right: 10px;
+      }
+    }
+    &.active,
+    &:hover {
+      > a i {
+        color: $color;
+      }
+    }
+
+    width: 25%;
+  }
+}
+button:focus {
+  outline: 0;
+}
+// step
+input.invalid {
+  background-color: #ffdddd;
+}
+.tab,
+.list_step {
+  display: none;
+}
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}

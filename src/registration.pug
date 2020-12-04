@@ -31,141 +31,217 @@ body
           li.breadcrumb-item.active(aria-current='page') Đăng ký thi
 
   section.content-page
-    .page-registration.container
-      .row
+    .container
+      .row.d-flex.justify-content-center
         .col-12
-          h2.title
-            span Đăng ký dự thi
-          #registration
-            form#customer_registration(accept-charset='utf-8' action='confirm.html')
-              .form-signup
-                .row
-                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Số CMND / Thẻ căn cước / Hộ chiếu
-                        span.required *
-                      input#id_cmnd.form-control(type='text' name='id_cmnd' placeholder='123456789' required='')
-                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Họ và tên đầy đủ
-                        span.required *
-                      input#nameCandidate.form-control(type='text' name='nameCandidate' placeholder='Nguyen Van A' required='')
-                  .col-md-12.col-lg-4.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Giới tính
-                        span.required *
-                      select#gender.form-control(name='gender')
-                        option(value='Nam' selected='selected') Nam
-                        option(value='Nữ') Nữ
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Ngày sinh (Theo giấy khai sinh)
-                        span.required *
-                      .input-group.date
-                        input#datepicker.form-control(type='text')
-                        i.far.fa-calendar-alt
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Mật khẩu
-                        span.required *
-                      input#passCandidate.form-control(type='password' name='passCandidate' placeholder='Thí sinh tự đặt mật khẩu' required='')
+          form#regForm(action='index.html')
+            // One "tab" for each step in the form:
+            .tab
+              h3.title: span Thông tin đợt thi
+              .row
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Loại chứng chỉ
+                      span.required *
+                    select.form-control(name="english")#english
+                      option(value='Tiếng Anh' ) Tiếng Anh
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Đợt thi
+                      span.required *
+                    select.form-control(name="dateTest")#dateTest
+                      option(value='Tháng 12-2020 (15,16/12/2020)') Tháng 12-2020 (15,16/12/2020)
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Cấp độ đăng ký
+                      span.required *
+                    select.form-control(name="level")#level
+                      option(value='Bậc 2/6 - A2') Bậc 2/6 - A2
+                      option(value='Bậc 3/6 - B1') Bậc 3/6 - B1
+                      option(value='Bậc 4/6 - B2') Bậc 4/6 - B2
+                      option(value='Bậc 5/6 - C1') Bậc 5/6 - C1
 
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Loại chứng chỉ
-                        span.required *
-                      select.form-control(name="english")
-                        option(value='Tiếng Anh' selected='selected') Tiếng Anh
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Đợt thi
-                        span.required *
-                      select.form-control(name="dateTest")
-                        option(value='Tháng 12-2020 (15,16/12/2020)' selected='selected') Tháng 12-2020 (15,16/12/2020)
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Cấp độ đăng ký
-                        span.required *
-                      select.form-control(name="level")
-                        option(value='Bậc 2/6 - A2') Bậc 2/6 - A2
-                        option(value='Bậc 3/6 - B1') Bậc 3/6 - B1
-                        option(value='Bậc 4/6 - B2') Bậc 4/6 - B2
-                        option(value='Bậc 5/6 - C1') Bậc 5/6 - C1
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Địa điểm
-                        span.required *
-                      select.form-control(name="addressTest")
-                        option(value='Khu 1 - Đại học Trà Vinh' selected='selected') Khu 1 - Đại học Trà Vinh
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Email
-                        span.required *
-                      input#email.form-control(type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' name='email' placeholder='Email' required='')
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Số điện thoại
-                        span.required *
-                      input#tel.form-control(type='tel' name='tel' placeholder='0908888888' required='')
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Nơi sinh (Theo giấy khai sinh)
-                        span.required *
-                      input#placeBirth.form-control(type='text' name='placeBirth' placeholder='Huyện - Tỉnh' required='')
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Nơi công tác, học tập
-                        span.required *
-                      input#placeWork.form-control(type='text' name='placeWork' placeholder='Nơi bạn đang công tác' required='')
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Địa chỉ (báo tin)
-                        span.required *
-                      input#address.form-control(type='text' name='address' placeholder='Nơi bạn đang công tác' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Địa điểm
+                      span.required *
+                    select.form-control(name="addressTest")
+                      option(value='Khu 1 - Đại học Trà Vinh') Khu 1 - Đại học Trà Vinh
+                      option(value='Khu 1 - Đại học Trà Vinh') Khu 1 - Đại học Trà Vinh
+                      option(value='Khu 1 - Đại học Trà Vinh') Khu 1 - Đại học Trà Vinh
 
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Đối tượng dự thi
-                        span.required *
-                      select.form-control(name="subjects")
-                        option(value='Thí sinh Tự do' selected='selected') Thí sinh Tự do
-                        option(value='Sinh viên Đại học Trà Vinh') Sinh viên Đại học Trà Vinh
-                        option(value='Học viên sau đại học Đại học Trà Vinh') Học viên sau đại học Đại học Trà Vinh
-                        option(value='Viên chức Đại học Trà Vinh') Viên chức Đại học Trà Vinh
 
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Ảnh chụp mặt trước CMND
-                        span.required *
-                      .custom-file
-                        input#picCMND.form-control(type='file' name='picCMND' required='')
-                  .col-md-12.col-lg-6.col-sm-12.col-xs-12
-                    fieldset.form-group
-                      label
-                        | Ảnh thẻ 4x6
-                        span.required *
+            .tab
+              h3.title: span Thông tin thí sinh
+              .row
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Số CMND / Thẻ căn cước / Hộ chiếu
+                      span.required *
+                    input#id_cmnd.form-control(type='text' name='id_cmnd' placeholder='123456789' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Họ và tên đầy đủ
+                      span.required *
+                    input#nameCandidate.form-control(type='text' name='nameCandidate' placeholder='Nguyen Van A' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Giới tính
+                      span.required *
+                    select#gender.form-control(name='gender')
+                      option(value='Nam' ) Nam
+                      option(value='Nữ') Nữ
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Ngày sinh (Theo giấy khai sinh)
+                      span.required *
+                    .input-group.date
+                      input#datepicker.form-control(type='text')
+                      i.far.fa-calendar-alt
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Tài Khoản
+                      span.required *
+                    input#idCandidate.form-control(type='text' name='idCandidate' placeholder='Thí sinh tự đặt tài khoản' required='')
 
-                      .custom-file
-                        input#piccard.form-control(type='file' name='piccard' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Mật khẩu
+                      span.required *
+                    input#passCandidate.form-control(type='password' name='passCandidate' placeholder='Thí sinh tự đặt mật khẩu' required='')
+            .tab
+              h3.title: span Thông tin quan trọng
+              .row
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Email
+                      span.required *
+                    input#email.form-control(type='email' pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$' name='email' placeholder='Email' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Số điện thoại
+                      span.required *
+                    input#tel.form-control(type='tel' name='tel' placeholder='0908888888' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Nơi sinh (Theo giấy khai sinh)
+                      span.required *
+                    input#placeBirth.form-control(type='text' name='placeBirth' placeholder='Huyện - Tỉnh' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Nơi công tác, học tập
+                      span.required *
+                    input#placeWork.form-control(type='text' name='placeWork' placeholder='Nơi bạn đang công tác' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Địa chỉ (báo tin)
+                      span.required *
+                    input#address.form-control(type='text' name='address' placeholder='Nơi bạn đang công tác' required='')
 
-                .button_bottom
-                  button.btn_register(type='submit' value='Tiếp theo') Tiếp theo
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Đối tượng dự thi
+                      span.required *
+                    select.form-control(name="subjects")
+                      option(value='Thí sinh Tự do' selected='selected') Thí sinh Tự do
+                      option(value='Sinh viên Đại học Trà Vinh') Sinh viên Đại học Trà Vinh
+                      option(value='Học viên sau đại học Đại học Trà Vinh') Học viên sau đại học Đại học Trà Vinh
+                      option(value='Viên chức Đại học Trà Vinh') Viên chức Đại học Trà Vinh
+
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Ảnh chụp mặt trước CMND
+                      span.required *
+                    .custom-file
+                      input#picCMND.form-control(type='file' name='picCMND' required='')
+                .col-md-12.col-lg-6.col-sm-12.col-xs-12
+                  fieldset.form-group
+                    label
+                      | Ảnh thẻ 4x6
+                      span.required *
+
+                    .custom-file
+                      input#piccard.form-control(type='file' name='piccard' required='')
+            .tab
+              h4.title: span Thông tin thanh toán
+
+              .payment-infomation
+                .stepbystep 
+                  strong Bước 1: 
+                  | Thí sinh in Phiếu đăng ký, ký tên.
+                .stepbystep 
+                  strong Bước 1: 
+                  | Nộp lệ phí thi.
+                  p + Lệ phí thi:
+                    label - Mức thu 1.300.000 đồng/thí sinh: áp dụng cho thí sinh đang là học sinh, sinh viên, học viên sau đại học hoặc viên chức, người lao động đang công tác tại trường Đại học Trà Vinh.
+                    label - Mức thu 1.800.000 đồng/thí sinh: đối với thí sinh tự do.
+                  p + Hình thức nộp: Thí sinh nộp lệ phí thi theo hình thức chuyển tiền vào tài khoản với thông tin:
+                  table(style='border: 1px;margin: 1.5% 0;' border='1' width='100%')
+                    tr
+                      td
+                        | Tên chủ tài khoản: 
+                        strong Trường Đại học Công Nghiệp Tp.HCM
+                        br
+                        | Số tài khoản: 
+                        strong 44001011666999
+                        | , tại Ngân hàng TMCP Hàng Hải Việt Nam (MSB) chi nhánh HCM
+                        br
+                        | Nội dung nộp tiền: 
+                        strong
+                          em &lt; Họ và tên thí sinh &gt; &lt; ĐGNLTA_bậc…_tháng... &gt; &lt; Số CMND &gt;
+                .stepbystep 
+                  strong Bước 3: 
+                  | Nộp hồ sơ 
+                  p + Hồ sơ đăng ký dự thi bao gồm  
+                    label - Phiếu đăng ký dự thi (thí sinh in Phiếu sau khi đăng ký trực tuyến, ký tên và ghi họ tên).
+                    label - 02 ảnh cỡ 4x6 được chụp không quá 06 tháng trước ngày đăng ký dự thi, mặt sau của ảnh ghi rõ họ và tên, ngày sinh, số chứng minh nhân dân.
+                    label - Bản sao có công chứng một trong những giấy tờ sau: chứng minh nhân dân, thẻ căn cước công dân, hộ chiếu.        
+                    label - Các giấy tờ để xác định đối tượng thí sinh đang là học sinh, sinh viên, học viên sau đại học hoặc viên chức, người lao động đang công tác tại trường Đại học Trà Vinh.
+                    label - Bản photo giấy nộp tiền qua ngân hàng.
+                .stepbystep 
+                  strong Bước 4: 
+                  | Nộp hồ sơ theo địa chỉ 
+                  p
+                    | Hồ sơ được gửi qua đường bưu chính theo thời gian được ghi trong thông báo đến địa chỉ:
+                  p
+                    strong Phòng A11.307 – Tòa nhà A1 - Trường Đại học Công nghiệp TP. Hồ Chí Minh
+                  p
+                    strong Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh
+                  p
+                    strong
+                      em Điện thoại:
+                    |  0283.8940 390 
+                    strong
+                      em Website
+                    | : 
+                    a(href='http://iuh.edu.vn/') http://iuh.edu.vn/
+            div.list_btn
+              div(style='float:right;')
+                button#prevBtn.btn_register(type='button' onclick='nextPrev(-1)') Trở lại
+                button#nextBtn.btn_register(type='button' onclick='nextPrev(1)') Tiếp theo
+            // Circles which indicates the steps of the form:
+            div.list_step
+              span.step
+              span.step
+              span.step
+              span.step
 
 
   //- footer
@@ -173,8 +249,9 @@ body
     include ./elements/_footer.pug
 
   script(src="https://code.jquery.com/jquery-2.2.4.min.js")
-  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js")
   script(src="./templates/js/default.js")
   script.
     $( function() {
@@ -183,3 +260,4 @@ body
     ,	duration: "fast"
     });
     } );
+

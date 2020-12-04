@@ -145,148 +145,203 @@
     </div>
   </nav>
   <section class="content-page">
-    <div class="page-registration container">
-      <div class="row">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
         <div class="col-12">
-          <h2 class="title"><span>Đăng ký dự thi</span></h2>
-          <div id="registration">
-            <form id="customer_registration" accept-charset="utf-8" action="confirm.html">
-              <div class="form-signup">
-                <div class="row">
-                  <div class="col-md-12 col-lg-4 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Số CMND / Thẻ căn cước / Hộ chiếu<span class="required">*</span></label>
-                      <input class="form-control" id="id_cmnd" type="text" name="id_cmnd" placeholder="123456789" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-4 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Họ và tên đầy đủ<span class="required">*</span></label>
-                      <input class="form-control" id="nameCandidate" type="text" name="nameCandidate" placeholder="Nguyen Van A" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-4 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Giới tính<span class="required">*</span></label>
-                      <select class="form-control" id="gender" name="gender">
-                        <option value="Nam" selected="selected">Nam</option>
-                        <option value="Nữ">Nữ</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Ngày sinh (Theo giấy khai sinh)<span class="required">*</span></label>
-                      <div class="input-group date">
-                        <input class="form-control" id="datepicker" type="text"><i class="far fa-calendar-alt"></i>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Mật khẩu<span class="required">*</span></label>
-                      <input class="form-control" id="passCandidate" type="password" name="passCandidate" placeholder="Thí sinh tự đặt mật khẩu" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Loại chứng chỉ<span class="required">*</span></label>
-                      <select class="form-control" name="english">
-                        <option value="Tiếng Anh" selected="selected">Tiếng Anh</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Đợt thi<span class="required">*</span></label>
-                      <select class="form-control" name="dateTest">
-                        <option value="Tháng 12-2020 (15,16/12/2020)" selected="selected">Tháng 12-2020 (15,16/12/2020)</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Cấp độ đăng ký<span class="required">*</span></label>
-                      <select class="form-control" name="level">
-                        <option value="Bậc 2/6 - A2">Bậc 2/6 - A2</option>
-                        <option value="Bậc 3/6 - B1">Bậc 3/6 - B1</option>
-                        <option value="Bậc 4/6 - B2">Bậc 4/6 - B2</option>
-                        <option value="Bậc 5/6 - C1">Bậc 5/6 - C1</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Địa điểm<span class="required">*</span></label>
-                      <select class="form-control" name="addressTest">
-                        <option value="Khu 1 - Đại học Trà Vinh" selected="selected">Khu 1 - Đại học Trà Vinh</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Email<span class="required">*</span></label>
-                      <input class="form-control" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,63}$" name="email" placeholder="Email" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Số điện thoại<span class="required">*</span></label>
-                      <input class="form-control" id="tel" type="tel" name="tel" placeholder="0908888888" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Nơi sinh (Theo giấy khai sinh)<span class="required">*</span></label>
-                      <input class="form-control" id="placeBirth" type="text" name="placeBirth" placeholder="Huyện - Tỉnh" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Nơi công tác, học tập<span class="required">*</span></label>
-                      <input class="form-control" id="placeWork" type="text" name="placeWork" placeholder="Nơi bạn đang công tác" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Địa chỉ (báo tin)<span class="required">*</span></label>
-                      <input class="form-control" id="address" type="text" name="address" placeholder="Nơi bạn đang công tác" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Đối tượng dự thi<span class="required">*</span></label>
-                      <select class="form-control" name="subjects">
-                        <option value="Thí sinh Tự do" selected="selected">Thí sinh Tự do</option>
-                        <option value="Sinh viên Đại học Trà Vinh">Sinh viên Đại học Trà Vinh</option>
-                        <option value="Học viên sau đại học Đại học Trà Vinh">Học viên sau đại học Đại học Trà Vinh</option>
-                        <option value="Viên chức Đại học Trà Vinh">Viên chức Đại học Trà Vinh</option>
-                      </select>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Ảnh chụp mặt trước CMND<span class="required">*</span></label>
-                      <div class="custom-file">
-                        <input class="form-control" id="picCMND" type="file" name="picCMND" required="">
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
-                    <fieldset class="form-group">
-                      <label>Ảnh thẻ 4x6<span class="required">*</span></label>
-                      <div class="custom-file">
-                        <input class="form-control" id="piccard" type="file" name="piccard" required="">
-                      </div>
-                    </fieldset>
-                  </div>
+          <form id="regForm" action="index.html">
+            <!-- One "tab" for each step in the form:-->
+            <div class="tab">
+              <h3 class="title"><span>Thông tin đợt thi</span></h3>
+              <div class="row">
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Loại chứng chỉ<span class="required">*</span></label>
+                    <select class="form-control" name="english" id="english">
+                      <option value="Tiếng Anh">Tiếng Anh</option>
+                    </select>
+                  </fieldset>
                 </div>
-                <div class="button_bottom">
-                  <button class="btn_register" type="submit" value="Tiếp theo">Tiếp theo</button>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Đợt thi<span class="required">*</span></label>
+                    <select class="form-control" name="dateTest" id="dateTest">
+                      <option value="Tháng 12-2020 (15,16/12/2020)">Tháng 12-2020 (15,16/12/2020)</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Cấp độ đăng ký<span class="required">*</span></label>
+                    <select class="form-control" name="level" id="level">
+                      <option value="Bậc 2/6 - A2">Bậc 2/6 - A2</option>
+                      <option value="Bậc 3/6 - B1">Bậc 3/6 - B1</option>
+                      <option value="Bậc 4/6 - B2">Bậc 4/6 - B2</option>
+                      <option value="Bậc 5/6 - C1">Bậc 5/6 - C1</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Địa điểm<span class="required">*</span></label>
+                    <select class="form-control" name="addressTest">
+                      <option value="Khu 1 - Đại học Trà Vinh">Khu 1 - Đại học Trà Vinh</option>
+                      <option value="Khu 1 - Đại học Trà Vinh">Khu 1 - Đại học Trà Vinh</option>
+                      <option value="Khu 1 - Đại học Trà Vinh">Khu 1 - Đại học Trà Vinh</option>
+                    </select>
+                  </fieldset>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+            <div class="tab">
+              <h3 class="title"><span>Thông tin thí sinh</span></h3>
+              <div class="row">
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Số CMND / Thẻ căn cước / Hộ chiếu<span class="required">*</span></label>
+                    <input class="form-control" id="id_cmnd" type="text" name="id_cmnd" placeholder="123456789" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Họ và tên đầy đủ<span class="required">*</span></label>
+                    <input class="form-control" id="nameCandidate" type="text" name="nameCandidate" placeholder="Nguyen Van A" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Giới tính<span class="required">*</span></label>
+                    <select class="form-control" id="gender" name="gender">
+                      <option value="Nam">Nam</option>
+                      <option value="Nữ">Nữ</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Ngày sinh (Theo giấy khai sinh)<span class="required">*</span></label>
+                    <div class="input-group date">
+                      <input class="form-control" id="datepicker" type="text"><i class="far fa-calendar-alt"></i>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Tài Khoản<span class="required">*</span></label>
+                    <input class="form-control" id="idCandidate" type="text" name="idCandidate" placeholder="Thí sinh tự đặt tài khoản" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Mật khẩu<span class="required">*</span></label>
+                    <input class="form-control" id="passCandidate" type="password" name="passCandidate" placeholder="Thí sinh tự đặt mật khẩu" required="">
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <h3 class="title"><span>Thông tin quan trọng</span></h3>
+              <div class="row">
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Email<span class="required">*</span></label>
+                    <input class="form-control" id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,63}$" name="email" placeholder="Email" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Số điện thoại<span class="required">*</span></label>
+                    <input class="form-control" id="tel" type="tel" name="tel" placeholder="0908888888" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Nơi sinh (Theo giấy khai sinh)<span class="required">*</span></label>
+                    <input class="form-control" id="placeBirth" type="text" name="placeBirth" placeholder="Huyện - Tỉnh" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Nơi công tác, học tập<span class="required">*</span></label>
+                    <input class="form-control" id="placeWork" type="text" name="placeWork" placeholder="Nơi bạn đang công tác" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Địa chỉ (báo tin)<span class="required">*</span></label>
+                    <input class="form-control" id="address" type="text" name="address" placeholder="Nơi bạn đang công tác" required="">
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Đối tượng dự thi<span class="required">*</span></label>
+                    <select class="form-control" name="subjects">
+                      <option value="Thí sinh Tự do" selected="selected">Thí sinh Tự do</option>
+                      <option value="Sinh viên Đại học Trà Vinh">Sinh viên Đại học Trà Vinh</option>
+                      <option value="Học viên sau đại học Đại học Trà Vinh">Học viên sau đại học Đại học Trà Vinh</option>
+                      <option value="Viên chức Đại học Trà Vinh">Viên chức Đại học Trà Vinh</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Ảnh chụp mặt trước CMND<span class="required">*</span></label>
+                    <div class="custom-file">
+                      <input class="form-control" id="picCMND" type="file" name="picCMND" required="">
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12">
+                  <fieldset class="form-group">
+                    <label>Ảnh thẻ 4x6<span class="required">*</span></label>
+                    <div class="custom-file">
+                      <input class="form-control" id="piccard" type="file" name="piccard" required="">
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <h4 class="title"><span>Thông tin thanh toán</span></h4>
+              <div class="payment-infomation">
+                <div class="stepbystep"> <strong>Bước 1: </strong>Thí sinh in Phiếu đăng ký, ký tên.</div>
+                <div class="stepbystep"> <strong>Bước 1: </strong>Nộp lệ phí thi.
+                  <p>+ Lệ phí thi:
+                    <label>- Mức thu 1.300.000 đồng/thí sinh: áp dụng cho thí sinh đang là học sinh, sinh viên, học viên sau đại học hoặc viên chức, người lao động đang công tác tại trường Đại học Trà Vinh.</label>
+                    <label>- Mức thu 1.800.000 đồng/thí sinh: đối với thí sinh tự do.</label>
+                  </p>
+                  <p>+ Hình thức nộp: Thí sinh nộp lệ phí thi theo hình thức chuyển tiền vào tài khoản với thông tin:</p>
+                  <table style="border: 1px;margin: 1.5% 0;" border="1" width="100%">
+                    <tr>
+                      <td>Tên chủ tài khoản: <strong>Trường Đại học Công Nghiệp Tp.HCM</strong><br>Số tài khoản: <strong>44001011666999</strong>, tại Ngân hàng TMCP Hàng Hải Việt Nam (MSB) chi nhánh HCM<br>Nội dung nộp tiền: <strong><em>&lt; Họ và tên thí sinh &gt; &lt; ĐGNLTA_bậc…_tháng... &gt; &lt; Số CMND &gt;</em></strong></td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="stepbystep"> <strong>Bước 3: </strong>Nộp hồ sơ 
+                  <p>+ Hồ sơ đăng ký dự thi bao gồm  
+                    <label>- Phiếu đăng ký dự thi (thí sinh in Phiếu sau khi đăng ký trực tuyến, ký tên và ghi họ tên).</label>
+                    <label>- 02 ảnh cỡ 4x6 được chụp không quá 06 tháng trước ngày đăng ký dự thi, mặt sau của ảnh ghi rõ họ và tên, ngày sinh, số chứng minh nhân dân.</label>
+                    <label>- Bản sao có công chứng một trong những giấy tờ sau: chứng minh nhân dân, thẻ căn cước công dân, hộ chiếu.        </label>
+                    <label>- Các giấy tờ để xác định đối tượng thí sinh đang là học sinh, sinh viên, học viên sau đại học hoặc viên chức, người lao động đang công tác tại trường Đại học Trà Vinh.</label>
+                    <label>- Bản photo giấy nộp tiền qua ngân hàng.</label>
+                  </p>
+                </div>
+                <div class="stepbystep"> <strong>Bước 4: </strong>Nộp hồ sơ theo địa chỉ 
+                  <p>Hồ sơ được gửi qua đường bưu chính theo thời gian được ghi trong thông báo đến địa chỉ:</p>
+                  <p><strong>Phòng A11.307 – Tòa nhà A1 - Trường Đại học Công nghiệp TP. Hồ Chí Minh</strong></p>
+                  <p><strong>Số 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Thành phố Hồ Chí Minh</strong></p>
+                  <p><strong><em>Điện thoại:</em></strong> 0283.8940 390 <strong><em>Website</em></strong>: <a href="http://iuh.edu.vn/">http://iuh.edu.vn/</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="list_btn">
+              <div style="float:right;">
+                <button class="btn_register" id="prevBtn" type="button" onclick="nextPrev(-1)">Trở lại</button>
+                <button class="btn_register" id="nextBtn" type="button" onclick="nextPrev(1)">Tiếp theo</button>
+              </div>
+            </div>
+            <!-- Circles which indicates the steps of the form:-->
+            <div class="list_step"><span class="step"></span><span class="step"></span><span class="step"></span><span class="step"></span></div>
+          </form>
         </div>
       </div>
     </div>
@@ -354,8 +409,9 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.js"></script>
   <script src="./templates/js/default.js"></script>
   <script>
     $( function() {
