@@ -1252,9 +1252,17 @@ header {
     padding-bottom: 1px;
   }
 }
+
 .card {
   figure {
     margin: 0;
+    a{
+      display: block;
+      img{
+        object-fit: cover;
+      }
+    }
+   
   }
   .card-body {
     padding-top: 0.7rem;
@@ -1262,25 +1270,39 @@ header {
       color: $color;
       padding-bottom: 0.5rem;
       font-size: 13px;
+      
       i {
         margin-right: 5px;
       }
     }
     h3 {
-      font-size: 15px;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed #1a1a1a;
+      a{
+        font-size: 15px;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
       color: #1a1a1a;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px dashed #1a1a1a;
-      max-height: 40px;
+    
       overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 22px;
+      -webkit-line-clamp: 2;
+      height: 2* 22px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      }
     }
     .card-text {
       color: #666666;
-      max-height: 105px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 22px;
+      -webkit-line-clamp: 5;
+      height: 5* 22px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
     }
   }
 }
@@ -1319,6 +1341,12 @@ header {
 .content-page {
   min-height: 500px;
   margin-bottom: 40px;
+  &.content-details{
+    img{
+      display: block;
+      margin: auto;
+    }
+  }
   #login {
     width: 50%;
     margin: auto;
